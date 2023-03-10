@@ -6,11 +6,25 @@ headingDivider: 2
 paginate: true
 header: '&e tech'
 footer: 'Created with [Marp](https://marp.app) and [Github Pages](https://pages.github.com)'
+backgroundImage: 'img/react-logo.svg'
 style: |
-  header {
+  section {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  section ul,
+  section ol,
+  section pre,
+  section img {
+    margin-left: 0;
+  }
+
+  section header {
     height: 100px;
     width: 100px;
-    float: left;
+    left: auto;
+    right: 40px;
     background-color: #dfddd7;
     background-size: contain;
     -webkit-mask-image: url(img/and-e-tech-logo-300.svg);
@@ -19,11 +33,7 @@ style: |
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
     mask-size: contain;
-    text-indent: -999999px
-  }
-
-  footer {
-    font-size: 0.6rem;
+    text-indent: -99999999px
   }
 --->
 
