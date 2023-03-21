@@ -4,36 +4,45 @@ theme: uncover
 class: invert
 headingDivider: 2
 paginate: true
-header: '&e tech'
+header: ![&e Tech](img/and-e-tech-logo-300.svg)
 footer: 'Created with [Marp](https://marp.app) and [Github Pages](https://pages.github.com)'
-backgroundImage: url('path/to/logo')
+backgroundImage: url('path/to/backgroundimage')
+backgroundPosition: 120% 120%
+backgroundSize: 40%
 style: |
-  section {
+  section,
+  section code {
     font-size: 30px;
     text-align: left;
   }
 
   section ul,
   section ol,
-  section pre,
   section img {
     margin-left: 0;
   }
 
-  section header {
+  section.long p,
+  section.long ul,
+  section.long ol,
+  section.long code, {
+    font-size: 24px;
+  }
+
+  section .columns img {
+    width: 100%;
+  }
+
+  section .columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  section header img {
     height: 100px;
     width: 100px;
-    left: auto;
-    right: 40px;
-    background-color: #dfddd7;
-    background-size: contain;
-    -webkit-mask-image: url(img/and-e-tech-logo-300.svg);
-    mask-image: url(img/and-e-tech-logo-300.svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    text-indent: -99999999px
+    float: right;
   }
 --->
 
