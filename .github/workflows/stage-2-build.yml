@@ -61,7 +61,7 @@ jobs:
           MARP_USER: root:root
 
       - name: Upload site
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: marp-site
           path: build/
