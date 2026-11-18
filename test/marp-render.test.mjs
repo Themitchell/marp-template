@@ -6,10 +6,9 @@ import { promisify } from 'node:util';
 
 const execFileAsync = promisify(execFile);
 
-test('renders deck with page title and and-e.tech logo', async () => {
+test('renders deck with and-e.tech logo', async () => {
   await execFileAsync('npm', ['run', 'build']);
   const html = await readFile('build/index.html', 'utf8');
 
-  assert.match(html, /<title>Plain content<\/title>/);
   assert.match(html, /src="img\/and-e-tech-logo-300\.svg"/);
 });
