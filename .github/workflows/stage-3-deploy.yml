@@ -22,7 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        if: inputs.mode == 'remove'
         uses: actions/checkout@v7
 
       - name: Download site
