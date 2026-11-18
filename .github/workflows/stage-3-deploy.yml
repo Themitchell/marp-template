@@ -64,7 +64,7 @@ jobs:
 
       - name: Download site
         if: github.event_name == 'workflow_run'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: marp-site
           path: build/
