@@ -1,24 +1,10 @@
 name: test
 
-concurrency:
-  group: stage-1-test-${{ github.ref }}
-  cancel-in-progress: true
-
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - labeled
+  workflow_call:
 
 jobs:
   test:
-    if: |
-      github.event.action != 'labeled' ||
-      github.event.label.name == 'deploy'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
