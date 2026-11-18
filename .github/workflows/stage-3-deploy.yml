@@ -1,4 +1,4 @@
-name: stage-3-deploy
+name: deploy
 
 concurrency:
   group: stage-3-deploy-${{ github.event.workflow_run.head_branch || github.ref }}
@@ -6,7 +6,7 @@ concurrency:
 
 on:
   workflow_run:
-    workflows: [stage-2-build]
+    workflows: [build]
     types:
       - completed
   pull_request:

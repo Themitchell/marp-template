@@ -1,4 +1,4 @@
-name: stage-2-build
+name: build
 
 concurrency:
   group: stage-2-build-${{ github.event.workflow_run.head_branch || github.ref }}
@@ -6,7 +6,7 @@ concurrency:
 
 on:
   workflow_run:
-    workflows: [stage-1-test]
+    workflows: [test]
     types:
       - completed
 
